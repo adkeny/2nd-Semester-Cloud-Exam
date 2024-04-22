@@ -1,4 +1,3 @@
 #!/bin/bash
 
- 0 0 * * * /path/to/cronJob.sh > /dev/null 2>&1
-
+ 0 0 * * * /usr/bin/uptime > /var/log/uptime_check.log 2>&1
