@@ -1,0 +1,17 @@
+---
+- name: deployment of  LAMP webstack on Slavenode
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: /home/vagrant/LabTest.sh
+        dest: /home/vagrant/LabTest.sh
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: install lamp stack and laravel
+      script: /home/vagrant/LabTest.sh
+      
+     
