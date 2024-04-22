@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Define VM configuration for the first Ubuntu VM
+  config.vm.define "master" do |master|
+    master.vm.box = "ubuntu/focal64"
+    master.vm.hostname = "master"
+    master.vm.network "private_network", ip: "192.168.56.101"
+    master.vm.network "forwarded_port", guest: 80, host: 8080, id: "master"
+    master.vm.provision "shell", path: "LabTest.sh"
+  end
+
+  # Define VM configuration for slave  Ubuntu VM
+  config.vm.define "slave" do |slave|
+    slave.vm.box = "ubuntu/focal64"
+    slave.vm.hostname = "slave"
+    slave.vm.network "private_network", ip: "192.168.56.102"
+    slave.vm.network "forwarded_port", guest: 80, host: 8081, id: "slave"
+  end
+
+end
