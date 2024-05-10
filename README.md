@@ -19,7 +19,7 @@ STEP 4: Update repository to install ansible
 ![updat repo to install ansible](https://github.com/adkeny/2nd-Semester-Cloud-Exam/assets/146006688/7fc4ccb5-298c-4f65-9603-6690531e0eb3)
 
 
-STEP 5: Establish and SSH Connection between the Master and Slave Ubuntu machinse (The Control and the Hosts), by first running the sSG Keygen Commmand:
+STEP 5: Establish and SSH Connection between the Master and Slave Ubuntu machinse (The Control and the Hosts), by first running the SSH Keygen Commmand:
 
 
 STEP 6: Connecting manster node to slave using the command via IP address of node ssh 192.168.56.102 
